@@ -70,8 +70,10 @@ p {
     }
     #entete {
         flex-direction: column-reverse;
+        text-align: center;
+        margin: auto;
     }
-
+    
 }
 
 
@@ -166,7 +168,7 @@ article h2 {
 
 
 /* Mon profil  */
-#profil {
+#portrait {
     width: 90%;
     margin: 50px auto;
     color: rgb(235, 33, 168);
@@ -177,7 +179,7 @@ article h2 {
     background-color: aliceblue;
     border-radius: 50%;
 }
-#profil .article {
+#portrait .article {
    
     font-style: italic;
     margin-bottom: 60px;
@@ -185,7 +187,7 @@ article h2 {
     
 }
 
-#profil_conseillere {
+#conseillere {
     text-transform:uppercase;
     font-family: Roboto, Arial, sans-serif;
     font-style: italic;
@@ -200,7 +202,7 @@ article h2 {
     border-radius: 20px;
 }
 
-/* photo de mon profil  */
+/* photo de mon portrait  */
 #maPhoto {
     text-decoration: none;
     margin-left: 49%;
@@ -230,26 +232,28 @@ article h2 {
 /* Photos retours clients */
 
 #RetourClient {
-    width: 90%;
+    
     margin: auto;
+    width: 100%;
+    background-color: rgb(203, 183, 183);
+    border-radius: 15px;
 }
 
-#RetourClient {
-    display: flex;
-    flex-direction: column;
-}
 
 #RetourClient_titres {
     font-size: 22px;
-    margin-top: 50px;
+    width: 90%;
+    margin: 30px auto;
     text-shadow: 2px 2px 5px rgb(128, 9, 152);
-    margin-bottom: 60px;
+    
 }
 #PhotoAvantApres {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 90%;
+    margin: auto;
 }
 
 #PhotoAvantApres img {
@@ -266,7 +270,8 @@ article h2 {
         display: flex;
         justify-content: center; /* Centre horizontalement */
         align-items: center;
-        margin-bottom: 20px;
+       
+        margin: 25px auto;
     }
 }
 
@@ -280,14 +285,12 @@ article h2 {
 }
 
 #imageArrierePlan {
-    width: 100%;
-    height: 100%;
+   text-align: center;
 }
+
 #imageArrierePlan img {
-    width: 100%; /* L'image prendra toute la largeur de son conteneur */
-    height: auto; /* La hauteur s'ajustera automatiquement pour conserver les proportions */
-    display: block; /* Évite les petits espaces blancs sous l'image */
-    
+    margin-top: 50px;
+    border-radius: 5px;
 }
 
 
@@ -301,12 +304,17 @@ article h2 {
 /* Intro packs proposés  */
 
 #box{
-    width: 90%;
+    width: 100%;
     margin: auto;
+    background-color: rgb(203, 183, 183);
+    border-radius: 15px;
+    margin-bottom: 20px;
 }
 
 #box_info{
     margin-bottom: 30px;
+    width: 90%;
+    margin: auto;
 }
 
 #box_info h2{
@@ -314,28 +322,54 @@ article h2 {
     
 }
 
-/* Etre client fidèle  */
-#fidelite {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-/*  Les photos des clients avnt après  */
-
-
-
-
-/* Les produits proposés      */
-#packs {
+#box_packs {
     display: flex;
     flex-direction: column;
-    margin: 50px 0;
+    width: 90%;
+    margin: 30px auto;
 }
-#packs p {
+#box_packs p {
     margin-bottom: 40px;
+    width: inherit;
+    
+}
+#autresProduits {
+    width: 90%;
+    margin: auto;
+}
+#autresProduits_img {
+   
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+    #autresProduits_img {
+        flex-direction: column;
+    }
 }
 
 
+/* Etre client fidèle  */
+#fidelite {
+    margin-bottom: 20px;
+    background-color: rgb(203, 183, 183);
+    border-radius: 15px;
+}
+#fidelite h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 20px auto;
+    padding-top: 20px;
+    width: 90%;
+}
+#fidelite p {
+    width: 90%;
+    margin: auto;
+}
+
+    
 #autresProduits_img img {
     margin-left: 50px;
     margin-top: 50px;
@@ -343,27 +377,7 @@ article h2 {
     margin: 20px auto;
 }
 
-#fidelite_img {
-    margin-top: 50px;
-}
 
-#fidelite_img img {
-    margin-left: 50px;
-    margin-bottom: 50px;
-
-}
-
-@media (max-width: 768px) {
-    #fidelite_img {
-        flex-direction: column;
-        
-    }
-    #fidelite_img img {
-        max-width: 80%;
-        width: 350px;
-        margin: 20px auto;
-    }
-}
 
 /*    */
 .container {
